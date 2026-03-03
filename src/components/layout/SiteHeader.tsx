@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
+import { Logo } from "./Logo";
 
 export async function SiteHeader() {
   const supabase = await createClient();
@@ -12,8 +13,8 @@ export async function SiteHeader() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           {/* ロゴ */}
-          <Link href="/" className="text-lg font-bold text-primary-700 shrink-0">
-            医療・介護求人ポータル
+          <Link href="/" className="shrink-0">
+            <Logo size="sm" />
           </Link>
 
           {/* ナビ */}

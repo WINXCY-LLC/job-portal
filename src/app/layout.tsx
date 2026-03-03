@@ -10,16 +10,16 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    default: "医療・介護求人ポータル",
-    template: "%s | 医療・介護求人ポータル",
+    default: "沖縄介護求人ジョブ",
+    template: "%s | 沖縄介護求人ジョブ",
   },
-  description: "医療・介護業界の求人情報を探すならこちら。看護師、介護士、医師など多数の求人を掲載中。",
-  keywords: ["医療求人", "介護求人", "看護師", "介護士", "医師", "薬剤師", "転職"],
+  description: "沖縄の医療・介護業界の求人情報を探すなら沖縄メディケアワーク。看護師、介護士、医師など多数の求人を掲載中。",
+  keywords: ["沖縄", "介護求人", "看護師求人", "医療求人", "介護士", "転職", "沖縄メディケアワーク"],
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    title: "医療・介護求人ポータル",
-    description: "医療・介護業界の求人情報を探すならこちら。",
+    title: "沖縄介護求人ジョブ | 沖縄メディケアワーク",
+    description: "沖縄の医療・介護業界の求人情報を探すなら沖縄メディケアワーク。",
   },
 };
 

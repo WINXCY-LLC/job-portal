@@ -244,8 +244,8 @@ export default async function ApplyPage({
 
       <footer className="mt-16 border-t border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-gray-400">
-          <p className="font-semibold text-gray-600 mb-1">医療・介護求人ポータル</p>
-          <p>© 2026 医療・介護求人ポータル. All rights reserved.</p>
+          <p className="font-semibold text-gray-600 mb-1">沖縄メディケアワーク</p>
+          <p>© 2026 沖縄メディケアワーク. All rights reserved.</p>
         </div>
       </footer>
     </div>

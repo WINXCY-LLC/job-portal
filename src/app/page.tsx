@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { Logo } from "@/components/layout/Logo";
 
 export default function HomePage() {
   return (
@@ -6,9 +8,7 @@ export default function HomePage() {
       {/* ヘッダー */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-primary-700">
-            医療・介護求人ポータル
-          </h1>
+          <Logo size="md" />
           <nav className="flex gap-4">
             <Link href="/jobs" className="text-gray-600 hover:text-primary-600 transition-colors">
               求人を探す
@@ -27,30 +27,97 @@ export default function HomePage() {
       </header>
 
       {/* ヒーローセクション */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">
-          あなたに最適な<span className="text-primary-600">医療・介護</span>の仕事を
-        </h2>
-        <p className="text-xl text-gray-600 mb-10">
-          看護師・介護士・医師・薬剤師など、多数の求人から理想のキャリアを見つけましょう
-        </p>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* 左：テキスト＋検索 */}
+          <div>
+            <p className="inline-flex items-center gap-1.5 text-sm font-medium text-teal-700 bg-teal-50 border border-teal-200 px-3 py-1 rounded-full mb-5">
+              <span>🌺</span> 沖縄の医療・介護求人 No.1
+            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-5 leading-tight">
+              あなたに最適な<br />
+              <span className="text-primary-600">医療・介護</span>の仕事を<br />
+              沖縄で見つけよう
+            </h2>
+            <p className="text-lg text-gray-600 mb-8">
+              看護師・介護士・医師・薬剤師など、沖縄県内の多数の求人から理想のキャリアを見つけましょう
+            </p>
 
-        {/* 検索バー */}
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="text"
-              placeholder="職種・キーワードを入力"
-              className="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            {/* 検索バー */}
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-5">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="text"
+                  placeholder="職種・キーワードを入力"
+                  className="flex-1 border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+                />
+                <input
+                  type="text"
+                  placeholder="市区町村"
+                  className="flex-1 sm:max-w-[160px] border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+                />
+                <Link
+                  href="/jobs"
+                  className="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-medium text-sm text-center"
+                >
+                  求人を探す
+                </Link>
+              </div>
+            </div>
+
+            {/* 統計 */}
+            <div className="flex gap-6 mt-6 text-sm text-gray-500">
+              <span><strong className="text-gray-800 text-base">4,600+</strong> 件の求人</span>
+              <span><strong className="text-gray-800 text-base">320+</strong> 施設</span>
+              <span><strong className="text-gray-800 text-base">無料</strong> 登録</span>
+            </div>
+          </div>
+
+          {/* 右：画像グリッド */}
+          <div className="hidden lg:grid grid-cols-2 gap-3 h-[420px]">
+            {/* メイン画像（左・縦長） */}
+            <div className="relative rounded-2xl overflow-hidden shadow-lg row-span-2">
+              <Image
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80"
+                alt="看護師が患者をケアしている様子"
+                fill
+                className="object-cover"
+                sizes="300px"
+                priority
+              />
+            </div>
+            {/* サブ画像1 */}
+            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&auto=format&fit=crop&q=80"
+                alt="介護士が高齢者をサポートしている様子"
+                fill
+                className="object-cover"
+                sizes="200px"
+              />
+            </div>
+            {/* サブ画像2 */}
+            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&auto=format&fit=crop&q=80"
+                alt="医療スタッフが笑顔で働いている様子"
+                fill
+                className="object-cover"
+                sizes="200px"
+              />
+            </div>
+          </div>
+
+          {/* モバイル用：横長1枚 */}
+          <div className="relative lg:hidden rounded-2xl overflow-hidden shadow-lg h-52">
+            <Image
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80"
+              alt="医療・介護スタッフ"
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
             />
-            <input
-              type="text"
-              placeholder="勤務地"
-              className="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500"
-            />
-            <button className="bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors font-medium">
-              検索
-            </button>
           </div>
         </div>
       </section>
@@ -83,8 +150,8 @@ export default function HomePage() {
       {/* フッター */}
       <footer className="bg-gray-800 text-gray-400 py-12 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-bold text-white text-lg mb-2">医療・介護求人ポータル</p>
-          <p className="text-sm">© 2026 医療・介護求人ポータル. All rights reserved.</p>
+          <p className="font-bold text-white text-lg mb-2">沖縄メディケアワーク</p>
+          <p className="text-sm">© 2026 沖縄メディケアワーク. All rights reserved.</p>
         </div>
       </footer>
     </main>

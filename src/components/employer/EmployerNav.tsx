@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { logout } from "@/app/actions/auth";
+import { Logo } from "@/components/layout/Logo";
 
 const NAV_ITEMS = [
   { href: "/employer/jobs", label: "求人管理", icon: "📋" },
@@ -19,8 +20,8 @@ export function EmployerNav({ companyName, currentPath }: EmployerNavProps) {
         <div className="flex items-center justify-between h-14">
           {/* ロゴ・施設名 */}
           <div className="flex items-center gap-3">
-            <Link href="/employer/jobs" className="text-base font-bold text-primary-700 shrink-0">
-              医療・介護求人
+            <Link href="/employer/jobs" className="shrink-0">
+              <Logo size="sm" />
             </Link>
             {companyName && (
               <>

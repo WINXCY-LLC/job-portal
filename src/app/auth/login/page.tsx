@@ -13,7 +13,7 @@ export default function LoginPage() {
         {/* ロゴ */}
         <div className="text-center">
           <Link href="/" className="inline-block">
-            <span className="text-2xl font-bold text-primary-700">医療・介護求人ポータル</span>
+            <span className="text-2xl font-bold text-primary-700">沖縄メディケアワーク</span>
           </Link>
           <h2 className="mt-4 text-2xl font-bold text-gray-900">ログイン</h2>
         </div>

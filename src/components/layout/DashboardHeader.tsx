@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { logout } from "@/app/actions/auth";
+import { Logo } from "./Logo";
 
 interface DashboardHeaderProps {
   userName: string | null;
@@ -10,8 +11,8 @@ export function DashboardHeader({ userName, role }: DashboardHeaderProps) {
   return (
     <header className="bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-        <Link href="/" className="text-lg font-bold text-primary-700">
-          医療・介護求人ポータル
+        <Link href="/">
+          <Logo size="sm" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm">

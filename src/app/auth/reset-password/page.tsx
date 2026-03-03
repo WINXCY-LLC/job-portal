@@ -12,7 +12,7 @@ export default function ResetPasswordPage() {
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <Link href="/" className="text-2xl font-bold text-primary-700">
-            医療・介護求人ポータル
+            沖縄メディケアワーク
           </Link>
           <h2 className="mt-6 text-2xl font-bold text-gray-900">新しいパスワードの設定</h2>
           <p className="mt-2 text-sm text-gray-600">
