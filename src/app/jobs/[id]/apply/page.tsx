@@ -82,7 +82,7 @@ export default async function ApplyPage({
 
   async function applyAction(formData: FormData) {
     "use server";
-    return createApplication(id, formData);
+    await createApplication(id, formData);
   }
 
   return (

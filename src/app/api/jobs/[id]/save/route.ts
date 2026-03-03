@@ -16,12 +16,12 @@ export async function POST(
   }
 
   // 既存のお気に入りを確認
-  const { data: existing } = await supabase
+  const { data: existing } = (await supabase
     .from("saved_jobs")
     .select("id")
     .eq("job_id", jobId)
     .eq("user_id", user.id)
-    .single();
+    .single()) as { data: { id: string } | null };
 
   if (existing) {
     // 既に保存済みなら削除（トグル）
